@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ShowMadeCatalogue">
         <activity android:name="com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalogue.detail.DetailActivity"></activity>
-        <activity android:name=".core.showmadecatalogue.MainActivity">
+        <activity
+            android:name=".core.showmadecatalogue.MainActivity"
+            android:theme="@style/Theme.ShowMadeCatalogue.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
