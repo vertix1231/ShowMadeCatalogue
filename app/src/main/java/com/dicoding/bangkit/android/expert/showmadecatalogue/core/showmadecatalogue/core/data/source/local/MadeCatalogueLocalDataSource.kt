@@ -1,6 +1,5 @@
 package com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalogue.core.data.source.local
 
-import androidx.lifecycle.LiveData
 import com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalogue.core.data.source.local.entity.MadeCatalogueEntity
 import com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalogue.core.data.source.local.room.MadeCatalogueDao
 import kotlinx.coroutines.flow.Flow
