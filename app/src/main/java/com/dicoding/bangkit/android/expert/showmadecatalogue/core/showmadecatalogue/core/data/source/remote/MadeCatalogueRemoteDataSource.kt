@@ -10,17 +10,17 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
 
-class MadeCatalogueRemoteDataSource private constructor(private val apiService: ApiService){
+class MadeCatalogueRemoteDataSource(private val apiService: ApiService){
 
-    companion object {
-        @Volatile
-        private var instance: MadeCatalogueRemoteDataSource? = null
-
-        fun getInstance(helper: ApiService): MadeCatalogueRemoteDataSource =
-            instance ?: synchronized(this) {
-                instance ?: MadeCatalogueRemoteDataSource(helper)
-            }
-    }
+//    companion object {
+//        @Volatile
+//        private var instance: MadeCatalogueRemoteDataSource? = null
+//
+//        fun getInstance(helper: ApiService): MadeCatalogueRemoteDataSource =
+//            instance ?: synchronized(this) {
+//                instance ?: MadeCatalogueRemoteDataSource(helper)
+//            }
+//    }
 
     suspend fun getAllMadeCatalogue(): Flow<ApiResponse<List<MadeCatalogueResponse>>> {
         //get data from remote api

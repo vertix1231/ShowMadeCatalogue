@@ -11,7 +11,7 @@ import com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalo
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-class MadeCatalogueRepository private constructor(
+class MadeCatalogueRepository(
     private val madeCatalogueRemoteDataSource: MadeCatalogueRemoteDataSource,
     private val madeCatalogueLocalDataSource: MadeCatalogueLocalDataSource,
     private val appExecutors: AppExecutors

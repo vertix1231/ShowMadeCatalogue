@@ -4,16 +4,16 @@ import com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalo
 import com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalogue.core.data.source.local.room.MadeCatalogueDao
 import kotlinx.coroutines.flow.Flow
 
-class MadeCatalogueLocalDataSource private constructor(private val madeCatalogueDao: MadeCatalogueDao){
+class MadeCatalogueLocalDataSource(private val madeCatalogueDao: MadeCatalogueDao){
 
-    companion object{
-        private var instance: MadeCatalogueLocalDataSource? = null
-
-        fun getInstance(madeCatalogueDao: MadeCatalogueDao): MadeCatalogueLocalDataSource =
-            instance ?: synchronized(this) {
-                instance ?: MadeCatalogueLocalDataSource(madeCatalogueDao)
-            }
-    }
+//    companion object{
+//        private var instance: MadeCatalogueLocalDataSource? = null
+//
+//        fun getInstance(madeCatalogueDao: MadeCatalogueDao): MadeCatalogueLocalDataSource =
+//            instance ?: synchronized(this) {
+//                instance ?: MadeCatalogueLocalDataSource(madeCatalogueDao)
+//            }
+//    }
 
     fun getAllMadeCatalogue(): Flow<List<MadeCatalogueEntity>> = madeCatalogueDao.getAllMadeCatalogue()
 

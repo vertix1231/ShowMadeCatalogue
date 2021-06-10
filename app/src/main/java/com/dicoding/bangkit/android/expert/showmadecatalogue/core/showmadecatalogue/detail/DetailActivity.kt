@@ -3,12 +3,11 @@ package com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatal
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.dicoding.bangkit.android.expert.showmadecatalogue.R
 import com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalogue.core.domain.model.MadeCatalogue
-import com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalogue.core.ui.ViewModelFactory
 import com.dicoding.bangkit.android.expert.showmadecatalogue.databinding.ActivityDetailBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DetailActivity : AppCompatActivity() {
 
@@ -16,7 +15,8 @@ class DetailActivity : AppCompatActivity() {
         const val EXTRA_DATA = "extra_data"
     }
 
-    private lateinit var detailViewModel: DetailViewModel
+    private val detailViewModel: DetailViewModel by viewModel()
+//    private lateinit var detailViewModel: DetailViewModel
     private lateinit var binding: ActivityDetailBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,8 +25,8 @@ class DetailActivity : AppCompatActivity() {
 
 //        setSupportActionBar(binding.toolbar)
 
-        val factory = ViewModelFactory.getInstance(this)
-        detailViewModel = ViewModelProvider(this, factory)[DetailViewModel::class.java]
+//        val factory = ViewModelFactory.getInstance(this)
+//        detailViewModel = ViewModelProvider(this, factory)[DetailViewModel::class.java]
 
         val madeCatalogue = intent.getParcelableExtra<MadeCatalogue>(EXTRA_DATA)
         showDetailTourism(madeCatalogue)
