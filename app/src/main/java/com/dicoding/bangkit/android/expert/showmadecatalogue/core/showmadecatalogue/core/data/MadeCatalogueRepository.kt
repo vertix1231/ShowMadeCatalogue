@@ -16,19 +16,19 @@ class MadeCatalogueRepository(
     private val madeCatalogueLocalDataSource: MadeCatalogueLocalDataSource,
     private val appExecutors: AppExecutors
 ):IMadeCatalogueRepository{
-    companion object {
-        @Volatile
-        private var instance: MadeCatalogueRepository? = null
-
-        fun getInstance(
-            remoteData: MadeCatalogueRemoteDataSource,
-            localData: MadeCatalogueLocalDataSource,
-            appExecutors: AppExecutors
-        ): MadeCatalogueRepository =
-            instance ?: synchronized(this) {
-                instance ?: MadeCatalogueRepository(remoteData, localData, appExecutors)
-            }
-    }
+//    companion object {
+//        @Volatile
+//        private var instance: MadeCatalogueRepository? = null
+//
+//        fun getInstance(
+//            remoteData: MadeCatalogueRemoteDataSource,
+//            localData: MadeCatalogueLocalDataSource,
+//            appExecutors: AppExecutors
+//        ): MadeCatalogueRepository =
+//            instance ?: synchronized(this) {
+//                instance ?: MadeCatalogueRepository(remoteData, localData, appExecutors)
+//            }
+//    }
 
     override fun getAllMadeCatalogue(): Flow<Resource<List<MadeCatalogue>>> =
         object : NetworkBoundResource<List<MadeCatalogue>, List<MadeCatalogueResponse>>(appExecutors) {
