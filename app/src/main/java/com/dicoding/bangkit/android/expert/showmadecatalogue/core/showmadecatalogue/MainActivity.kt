@@ -52,9 +52,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 title = getString(R.string.menu_favorite)
             }
             R.id.nav_map -> {
-//                val uri = Uri.parse("madecataloguemapp://maps")
-//                startActivity(Intent(Intent.ACTION_VIEW, uri))
-//
+                val uri = Uri.parse("madecataloguemapappp://maps")
+                startActivity(Intent(Intent.ACTION_VIEW, uri))
+
                 Toast.makeText(this, "Coming soon", Toast.LENGTH_SHORT).show()
             }
         }

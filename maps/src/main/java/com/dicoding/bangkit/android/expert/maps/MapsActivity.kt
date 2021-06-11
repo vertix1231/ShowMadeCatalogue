@@ -19,7 +19,7 @@ class MapsActivity : AppCompatActivity() {
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        loadKoinModules(mapsModule)
+        loadKoinModules(mapsModule)
 
         supportActionBar?.title = "MadeCatalogue Map"
 

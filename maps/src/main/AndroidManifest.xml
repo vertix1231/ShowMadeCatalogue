@@ -16,15 +16,15 @@
     <application>
         <activity android:name=".MapsActivity"></activity>
 
-<!--        <intent-filter>-->
-<!--            <action android:name="android.intent.action.VIEW"/>-->
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW"/>
 
-<!--            <category android:name="android.intent.category.DEFAULT"/>-->
+            <category android:name="android.intent.category.DEFAULT"/>
 
-<!--            <data android:scheme="madecataloguemapp"-->
-<!--                android:host="maps"/>-->
+            <data android:scheme="madecataloguemapappp"
+                android:host="maps"/>
 
-<!--        </intent-filter>-->
+        </intent-filter>
     </application>
 
 </manifest>
