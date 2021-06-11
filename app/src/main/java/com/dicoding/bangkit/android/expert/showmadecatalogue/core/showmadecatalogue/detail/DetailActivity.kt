@@ -4,8 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
+import com.dicoding.bangkit.android.expert.core.domain.model.MadeCatalogue
 import com.dicoding.bangkit.android.expert.showmadecatalogue.R
-import com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalogue.core.domain.model.MadeCatalogue
 import com.dicoding.bangkit.android.expert.showmadecatalogue.databinding.ActivityDetailBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

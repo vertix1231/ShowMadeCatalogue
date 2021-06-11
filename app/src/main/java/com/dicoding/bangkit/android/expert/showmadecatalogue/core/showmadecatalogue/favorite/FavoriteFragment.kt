@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalogue.core.ui.MadeCatalogueAdapter
+import com.dicoding.bangkit.android.expert.core.ui.MadeCatalogueAdapter
 import com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalogue.detail.DetailActivity
 import com.dicoding.bangkit.android.expert.showmadecatalogue.databinding.FragmentFavoriteBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel

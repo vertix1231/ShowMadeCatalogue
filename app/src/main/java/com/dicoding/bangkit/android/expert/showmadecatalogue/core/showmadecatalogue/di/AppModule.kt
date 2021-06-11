@@ -1,7 +1,7 @@
 package com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalogue.di
 
-import com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalogue.core.domain.usecase.MadeCatalogueInteractor
-import com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalogue.core.domain.usecase.MadeCatalogueUseCase
+import com.dicoding.bangkit.android.expert.core.domain.usecase.MadeCatalogueInteractor
+import com.dicoding.bangkit.android.expert.core.domain.usecase.MadeCatalogueUseCase
 import com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalogue.detail.DetailViewModel
 import com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalogue.favorite.FavoriteViewModel
 import com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalogue.home.HomeViewModel
