@@ -1,5 +1,7 @@
 package com.dicoding.bangkit.android.expert.showmadecatalogue.core.showmadecatalogue
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -50,6 +52,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 title = getString(R.string.menu_favorite)
             }
             R.id.nav_map -> {
+//                val uri = Uri.parse("madecataloguemapp://maps")
+//                startActivity(Intent(Intent.ACTION_VIEW, uri))
+//
                 Toast.makeText(this, "Coming soon", Toast.LENGTH_SHORT).show()
             }
         }

@@ -1,3 +1,4 @@
 rootProject.name = "ShowMadeCatalogue"
 include ':app'
 include ':core'
+include ':maps'
