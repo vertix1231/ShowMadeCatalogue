@@ -29,7 +29,7 @@ class MadeCatalogueAdapter : RecyclerView.Adapter<MadeCatalogueAdapter.ListViewH
                     .load(data.image)
                     .into(ivItemImage)
                 tvItemTitle.text = data.name
-                tvItemSubtitle.text = data.address
+                tvItemSubtitle.text = data.rating
             }
         }
         init {

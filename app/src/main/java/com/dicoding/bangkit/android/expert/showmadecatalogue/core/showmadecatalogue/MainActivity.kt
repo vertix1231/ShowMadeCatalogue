@@ -33,6 +33,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.string.navigation_drawer_close
         )
         binding.drawerMainLayout.addDrawerListener(toggle)
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        supportActionBar?.setHomeButtonEnabled(true)
         toggle.syncState()
 
         binding.navView.setNavigationItemSelectedListener(this)
@@ -46,16 +48,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_home -> {
                 fragment = HomeFragment()
                 title = getString(R.string.app_name)
+
+                Toast.makeText(this, "Game Populer tahun 1000-3020 :)", Toast.LENGTH_SHORT).show()
             }
             R.id.nav_favorite -> {
                 fragment = FavoriteFragment()
                 title = getString(R.string.menu_favorite)
+
+                Toast.makeText(this, "Favorite regular", Toast.LENGTH_SHORT).show()
             }
-            R.id.nav_map -> {
-                val uri = Uri.parse("madecataloguemapappp://maps")
+            R.id.nav_map_favorite_with_dynamic_feature -> {
+                val uri = Uri.parse("madecataloguemapappp://mapsfavorite")
                 startActivity(Intent(Intent.ACTION_VIEW, uri))
 
-                Toast.makeText(this, "Coming soon", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Favorit with dynamic feature", Toast.LENGTH_SHORT).show()
             }
         }
         if (fragment != null) {

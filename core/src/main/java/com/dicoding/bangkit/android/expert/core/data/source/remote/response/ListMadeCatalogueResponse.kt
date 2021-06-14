@@ -4,12 +4,23 @@ import com.google.gson.annotations.SerializedName
 
 data class ListMadeCatalogueResponse(
 
-    @SerializedName("error")
-    val error:Boolean,
+    @SerializedName("count")
+    val count: Int,
 
-    @SerializedName("message")
-    val message:String,
+    @SerializedName("next")
+    val next: String,
 
-    @SerializedName("places")
+    @SerializedName("previous")
+    val previous: String,
+
+    @SerializedName("results")
     val places:List<MadeCatalogueResponse>
+//    @SerializedName("error")
+//    val error:Boolean,
+//
+//    @SerializedName("message")
+//    val message:String,
+//
+//    @SerializedName("places")
+//    val places:List<MadeCatalogueResponse>
 )

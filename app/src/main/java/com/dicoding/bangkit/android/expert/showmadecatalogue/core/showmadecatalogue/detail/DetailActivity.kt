@@ -35,7 +35,18 @@ class DetailActivity : AppCompatActivity() {
     private fun showDetailTourism(madeCatalogue: MadeCatalogue?) {
         madeCatalogue?.let {
             supportActionBar?.title = madeCatalogue.name
-            binding.content.tvDetailDescription.text = madeCatalogue.description
+            binding.content.tvDetailDescription.text = "Deskirpsi singkat item entertaiment ${madeCatalogue.name}: \n \n" +
+                    " ${madeCatalogue.name} merupakan item entertaiment dengan id ${madeCatalogue.Id} yang di rilis pada tahun ${madeCatalogue.released} dengan " +
+                    "rating ${madeCatalogue.rating} telah dimainkan total pengguna seluruh dunia dengan total waktu" +
+                    " ${madeCatalogue.playtime}. Pengguna yang telah memakai atau memainkan item entertaiment ini juga didapat" +
+                    "data yang menunjukkan ada total rating count dari pengguna sebagai penilaian produk dengan total" +
+                    " ${madeCatalogue.ratings_count}. Metacritic.com merupakan situs web yang memberi pendapat tentang " +
+                    "album, video game, film, acara televisi dan DVD telah memberi penialaian terhadap item ini dengan nilai" +
+                    " ${madeCatalogue.metacritic} dan telah diverifikasi juga penilaian" +
+                    "secara resmi. ${madeCatalogue.name} sangat direkomendasikan untuk menghilangkan permasalahan dunia" +
+                    "dan relax sebentar menikmati layanan entertaiment ini terutama bersama" +
+                    "teman dan keluarga :)"
+//            binding.content.tvDetailDescription.text = madeCatalogue.name
             Glide.with(this@DetailActivity)
                 .load(madeCatalogue.image)
                 .into(binding.ivDetailImage)

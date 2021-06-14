@@ -5,13 +5,25 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class MadeCatalogue(
-    val tourismId: String,
+
+    val Id: String,
     val name: String,
-    val description: String,
-    val address: String,
-    val latitude: Double,
-    val longitude: Double,
-    val like: Int,
+    val released: String,
+    val rating: String,
+    val playtime: Double,
+    val metacritic: Double,
+    val ratings_count: Int,
     val image: String,
     val isFavorite: Boolean,
+
+
+//    val tourismId: String,
+//    val name: String,
+//    val description: String,
+//    val address: String,
+//    val latitude: Double,
+//    val longitude: Double,
+//    val like: Int,
+//    val image: String,
+//    val isFavorite: Boolean,
 ):Parcelable

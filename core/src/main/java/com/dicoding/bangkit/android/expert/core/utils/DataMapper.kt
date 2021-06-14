@@ -9,15 +9,25 @@ object DataMapper {
         val tourismList = ArrayList<MadeCatalogueEntity>()
         input.map {
             val tourism = MadeCatalogueEntity(
-                tourismId = it.id,
-                description = it.description,
+                Id = it.Id,
                 name = it.name,
-                address = it.address,
-                latitude = it.latitude,
-                longitude = it.longitude,
-                like = it.like,
+                released = it.released,
+                rating = it.rating,
+                playtime = it.playtime,
+                metacritic = it.metacritic,
+                ratings_count = it.ratings_count,
                 image = it.image,
-                isFavorite = false
+                isFavorite = false,
+
+//                tourismId = it.id,
+//                description = it.description,
+//                name = it.name,
+//                address = it.address,
+//                latitude = it.latitude,
+//                longitude = it.longitude,
+//                like = it.like,
+//                image = it.image,
+//                isFavorite = false
             )
             tourismList.add(tourism)
         }
@@ -29,25 +39,25 @@ object DataMapper {
     fun mapEntitiesToDomain(input: List<MadeCatalogueEntity>): List<MadeCatalogue> =
         input.map {
             MadeCatalogue(
-                tourismId = it.tourismId,
-                description = it.description,
+                Id = it.Id,
                 name = it.name,
-                address = it.address,
-                latitude = it.latitude,
-                longitude = it.longitude,
-                like = it.like,
+                released = it.released,
+                rating = it.rating,
+                playtime = it.playtime,
+                metacritic = it.metacritic,
+                ratings_count = it.ratings_count,
                 image = it.image,
                 isFavorite = it.isFavorite
             )
         }
     fun mapDomainToEntity(input: MadeCatalogue) = MadeCatalogueEntity(
-        tourismId = input.tourismId,
-        description = input.description,
+        Id = input.Id,
         name = input.name,
-        address = input.address,
-        latitude = input.latitude,
-        longitude = input.longitude,
-        like = input.like,
+        released = input.released,
+        rating = input.rating,
+        playtime = input.playtime,
+        metacritic = input.metacritic,
+        ratings_count = input.ratings_count,
         image = input.image,
         isFavorite = input.isFavorite
     )

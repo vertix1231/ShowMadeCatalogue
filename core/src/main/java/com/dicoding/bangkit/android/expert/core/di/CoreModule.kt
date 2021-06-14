@@ -37,12 +37,20 @@ val networkModule = module {
     }
     single {
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://tourism-api.dicoding.dev/")
+            .baseUrl("https://api.rawg.io/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(get())
             .build()
         retrofit.create(ApiService::class.java)
     }
+//    single {
+//        val retrofit = Retrofit.Builder()
+//            .baseUrl("https://tourism-api.dicoding.dev/")
+//            .addConverterFactory(GsonConverterFactory.create())
+//            .client(get())
+//            .build()
+//        retrofit.create(ApiService::class.java)
+//    }
 }
 
 val repositoryModule = module {
