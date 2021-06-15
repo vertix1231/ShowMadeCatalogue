@@ -39,6 +39,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         binding.navView.setNavigationItemSelectedListener(this)
 
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.nav_host_fragment, HomeFragment())
+                .commit()
+            supportActionBar?.title = getString(R.string.app_name)
+        }
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
