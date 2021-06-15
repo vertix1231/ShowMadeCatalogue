@@ -28,4 +28,7 @@ class SplashScreenMadeCatalogueActivity : AppCompatActivity() {
         }
         bekron.start()
     }
+
+
+
 }

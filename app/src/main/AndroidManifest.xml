@@ -17,7 +17,8 @@
         <activity android:name=".core.showmadecatalogue.detail.DetailActivity" />
         <activity
             android:name=".core.showmadecatalogue.splashscreen.SplashScreenMadeCatalogueActivity"
-            android:theme="@style/Theme.ShowMadeCatalogue.NoActionBar">
+            android:theme="@style/Theme.ShowMadeCatalogue.NoActionBar"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
